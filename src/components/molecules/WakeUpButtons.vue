@@ -6,14 +6,14 @@
 </template>
 
 <script>
-  import InWakeUpButton from '@/components/atoms/InWakeUpButton.vue'
-  import OutWakeUpButton from '@/components/atoms/OutWakeUpButton.vue'
+import InWakeUpButton from '@/components/atoms/InWakeUpButton.vue'
+import OutWakeUpButton from '@/components/atoms/OutWakeUpButton.vue'
 
-  export default {
-    name: 'wake-up-buttons',
-    components: {
-      InWakeUpButton,
-      OutWakeUpButton
-    }
+export default {
+  name: 'wake-up-buttons',
+  components: {
+    InWakeUpButton,
+    OutWakeUpButton
   }
+}
 </script>
