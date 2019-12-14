@@ -1,5 +1,5 @@
 <template>
-  <KintaiListMenuItem :user="user"></KintaiListMenuItem>
+  <KintaiListMenuItem></KintaiListMenuItem>
 </template>
 
 <script>
