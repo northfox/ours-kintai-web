@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { SAVE_IN_WAKE_UP } from "@/store/actions.type";
+import { SAVE_IN_WAKE_UP } from '@/store/actions.type'
 
 export default {
   name: 'in-wake-up-button',
