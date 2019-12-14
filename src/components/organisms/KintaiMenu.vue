@@ -8,7 +8,7 @@
 import KintaiListMenu from '@/components/molecules/KintaiListMenu.vue'
 
 export default {
-  name: 'menu',
+  name: 'kintai-menu',
   components: {
     KintaiListMenu
   }
