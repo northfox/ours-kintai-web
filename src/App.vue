@@ -5,12 +5,12 @@
         <router-link class="navbar-brand" to="/">Kintai</router-link>
       </div>
     </nav>
-    <router-view class="pt-2" />
+    <router-view class="p-3" />
   </div>
 </template>
 
 <style>
-  #app {
-    background-color: #fcfcfc;
-  }
+#app {
+  background-color: #fafafa;
+}
 </style>
