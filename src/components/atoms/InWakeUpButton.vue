@@ -9,11 +9,16 @@ export default {
   name: 'in-wake-up-button',
   methods: {
     save() {
-      let now = this.$dayjs().format('YYYY-MM-DDTHH:mm:ss')
+      let userId = 1
+      let now = this.$dayjs().format('YYYY-MM-DDTHH:mm:ssZ')
       this.$store.dispatch(SAVE_IN_WAKE_UP, {
-        resource: '',
-        slug: '',
-        time: now
+        resource: `/users/${userId}/time`,
+        slug: null,
+        data: {
+          user_id: userId,
+          in_time: now,
+          category: 'wake-up'
+        }
       })
     }
   }
