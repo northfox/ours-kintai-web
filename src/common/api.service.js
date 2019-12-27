@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-const API_URL = 'http://localhost:3000/api'
+const API_URL = 'http://localhost:3000/api/v1'
 
 const ApiService = {
   init() {

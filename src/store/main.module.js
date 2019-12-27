@@ -11,7 +11,7 @@ const state = {
 
 const actions = {
   async [SAVE_IN_WAKE_UP]({ commit }, payload) {
-    ApiService.put(payload.resource, payload.data)
+    ApiService.post(payload.resource, payload.data)
       .then(({ data }) => {
         commit(SET_IN_WAKE_UP, data)
       })
