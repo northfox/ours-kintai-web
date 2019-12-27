@@ -7,9 +7,11 @@ import dayjs from 'dayjs'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import ApiService from './common/api.service'
+import constants from './common/constants'
 
 Vue.config.productionTip = false
 Vue.prototype.$dayjs = dayjs
+Vue.prototype.$constants = constants
 
 ApiService.init()
 

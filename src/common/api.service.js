@@ -16,6 +16,11 @@ const ApiService = {
       console.error(error)
     })
   },
+  get(resource) {
+    return Vue.axios.get(resource).catch((error) => {
+      console.error(error)
+    })
+  },
   post(resource, params) {
     return Vue.axios.post(resource, params).catch((error) => {
       console.error(error)

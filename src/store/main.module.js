@@ -1,35 +1,47 @@
 import ApiService from '@/common/api.service'
-import { SAVE_IN_WAKE_UP } from './actions.type'
-import { SET_IN_WAKE_UP } from './mutations.type'
+import { FIND_IN_TIME_WAKE_UP, SAVE_IN_TIME_WAKE_UP } from './actions.type'
+import { SET_IN_TIME_WAKE_UP } from './mutations.type'
 
 const state = {
-  times: {
+  user: {},
+  times: [],
+  time: {
     category: '',
-    user: {}
+    user: {},
+    inTime: '',
+    outTime: ''
   }
 }
 
 const actions = {
-  async [SAVE_IN_WAKE_UP]({ commit }, payload) {
+  async [SAVE_IN_TIME_WAKE_UP]({ commit }, payload) {
     ApiService.post(payload.resource, payload.data)
       .then(({ data }) => {
-        commit(SET_IN_WAKE_UP, data)
+        commit(SET_IN_TIME_WAKE_UP, data)
       })
       .catch((error) => {
         throw new Error(error)
       })
+  },
+  async [FIND_IN_TIME_WAKE_UP](context, payload) {
+    const { data } = await ApiService.get(payload.resource)
+    context.commit(SET_IN_TIME_WAKE_UP, data)
+    return data.time
   }
 }
 
 const mutations = {
-  [SET_IN_WAKE_UP](state, { data }) {
-    state.times = data.times
+  [SET_IN_TIME_WAKE_UP](state, { data }) {
+    state.time = data.time
   }
 }
 
 const getters = {
   times(state) {
     return state.times
+  },
+  time(state) {
+    return state.time
   }
 }
 
