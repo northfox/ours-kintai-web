@@ -1,7 +1,7 @@
 <template>
   <div class="ours---home">
     <KintaiMenu></KintaiMenu>
-    <InOut></InOut>
+    <InOut :user="user"></InOut>
   </div>
 </template>
 
@@ -12,6 +12,13 @@ import InOut from '@/components/organisms/InOut.vue'
 
 export default {
   name: 'home',
+  data() {
+    return {
+      user: {
+        id: 10001
+      }
+    }
+  },
   components: {
     KintaiMenu,
     InOut

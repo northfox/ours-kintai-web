@@ -1,6 +1,6 @@
 <template>
   <section class="ours---in-out">
-    <WakeUpButtons></WakeUpButtons>
+    <WakeUpButtons :user="user"></WakeUpButtons>
   </section>
 </template>
 
@@ -9,6 +9,9 @@ import WakeUpButtons from '@/components/molecules/WakeUpButtons.vue'
 
 export default {
   name: 'in-out',
+  props: {
+    user: Object
+  },
   components: {
     WakeUpButtons
   }
