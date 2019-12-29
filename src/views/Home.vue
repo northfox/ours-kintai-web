@@ -11,7 +11,7 @@ import KintaiMenu from '@/components/organisms/KintaiMenu.vue'
 import InOut from '@/components/organisms/InOut.vue'
 
 export default {
-  name: 'home',
+  name: 'home-template',
   data() {
     return {
       user: {
