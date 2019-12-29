@@ -1,7 +1,11 @@
 <template>
-  <table>
-    <KintaiListHeader></KintaiListHeader>
-    <KintaiListBody v-for="time in times" :time="time" :key="time.id"></KintaiListBody>
+  <table class="table table-striped table-hover table-sm">
+    <thead class="thead-dark">
+      <KintaiListHeader></KintaiListHeader>
+    </thead>
+    <tbody>
+      <KintaiListBody v-for="time in times" :time="time" :key="time.id"></KintaiListBody>
+    </tbody>
   </table>
 </template>
 
